@@ -6,7 +6,6 @@ def diary_app():
 
     try:
         if choice == 'W':
-            # 'a' opens for appending (adding to the end)
             with open(filename, "a") as file:
                 note = input("Enter your thought: ")
                 time = datetime.datetime.now().strftime("%H:%M")
@@ -14,7 +13,6 @@ def diary_app():
                 print("Saved!")
 
         elif choice == 'V':
-            # 'r' opens for reading
             with open(filename, "r") as file:
                 print("\n--- Past Entries ---\n" + file.read())
 
@@ -24,3 +22,4 @@ def diary_app():
         print("System error: Permission denied.")
 
 diary_app()
+
